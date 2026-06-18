@@ -1,0 +1,87 @@
+/* ============================================================
+   DESIGN TOKENS & GLOBAL STYLES
+   ============================================================ */
+:root {
+  /* Primary palette */
+  --clr-bg: #ffffff;
+  --clr-bg-alt: #f8fafc;
+  --clr-surface: #f8fafc;
+  --clr-card: #ffffff;
+  --clr-card-hover: #f1f5f9;
+
+  /* Accent */
+  --clr-accent: #6366f1;
+  --clr-accent-2: #8b5cf6;
+  --clr-accent-3: #06b6d4;
+  --clr-accent-light: #a5b4fc;
+  --clr-accent-glow: rgba(99, 102, 241, 0.2);
+  --clr-accent-glow-strong: rgba(99, 102, 241, 0.4);
+
+  /* Text */
+  --clr-text: #0f172a;
+  --clr-text-dim: #475569;
+  --clr-heading: #0f172a;
+  --clr-white: #ffffff;
+
+  /* Misc */
+  --clr-border: rgba(148, 163, 184, 0.12);
+  --clr-border-hover: rgba(99, 102, 241, 0.25);
+  --clr-glass: rgba(255, 255, 255, 0.85);
+  --nav-h: 72px;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --gradient-accent: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #06b6d4 100%);
+  --gradient-card: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--clr-bg);
+  color: var(--clr-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+button { font-family: inherit; }
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: var(--clr-heading);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--clr-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-accent);
+  border-radius: 3px;
+}
+
+/* Utility */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}

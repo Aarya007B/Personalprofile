@@ -1,0 +1,162 @@
+/* ============================================================
+   ACADEMICS SECTION
+   ============================================================ */
+.academics {
+  padding: 120px 0;
+  position: relative;
+}
+
+.academics__timeline {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  padding-left: 50px;
+}
+
+.academics__timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--clr-accent),
+    var(--clr-accent-2),
+    transparent
+  );
+  border-radius: 2px;
+}
+
+.academics__item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.academics__item:last-child {
+  margin-bottom: 0;
+}
+
+/* Node (dot on the timeline) */
+.academics__node {
+  position: absolute;
+  left: -42px;
+  top: 28px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.academics__node-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--clr-accent);
+  border-radius: 50%;
+  border: 3px solid var(--clr-bg);
+  box-shadow: 0 0 0 4px var(--clr-accent-glow), 0 0 20px var(--clr-accent-glow);
+}
+
+/* Card */
+.academics__card {
+  background: var(--clr-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  padding: 30px 34px;
+  transition: var(--transition);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.academics__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-accent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.academics__card:hover::before {
+  opacity: 1;
+}
+
+.academics__card:hover {
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.1);
+}
+
+.academics__card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.academics__icon {
+  font-size: 1.4rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 10px;
+}
+
+.academics__year {
+  display: inline-block;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--clr-accent-light);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.academics__highlight {
+  display: inline-block;
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.academics__degree {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--clr-heading);
+  margin-bottom: 6px;
+}
+
+.academics__institution {
+  font-size: 0.92rem;
+  color: var(--clr-accent-light);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.academics__description {
+  font-size: 0.92rem;
+  color: var(--clr-text-dim);
+  line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .academics__timeline {
+    padding-left: 36px;
+  }
+  .academics__node {
+    left: -30px;
+  }
+  .academics__card {
+    padding: 22px 24px;
+  }
+}
