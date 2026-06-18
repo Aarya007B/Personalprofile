@@ -65,7 +65,7 @@
 }
 
 /* Code window */
-..about__code-window {
+.about__code-window {
   background: var(--clr-card);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
