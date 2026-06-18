@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react' // or whatever framework plugin you use
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    // Add this line to force esbuild instead of lightningcss
+    cssMinify: 'esbuild', 
+  }
 })
