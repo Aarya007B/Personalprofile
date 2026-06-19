@@ -3,8 +3,6 @@ import react from '@vitejs/plugin-react' // or whatever framework plugin you use
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    // Add this line to force esbuild instead of lightningcss
-    cssMinify: 'esbuild', 
-  }
-})
+    plugins: [react()],
+    base: process.env.VITE_BASE_PATH || '/Personalprofile',
+});
